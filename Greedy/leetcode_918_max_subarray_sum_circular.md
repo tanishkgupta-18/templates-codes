@@ -25,6 +25,13 @@ int maxSubarraySumCircular(vector<int>& a) {
 
     // Step 3: Final answer
     // If all numbers are negative, maxSum is the correct result
+    /*
+    
+    If all elements are negative, then:
+    total == minSum → total - minSum = 0, which is invalid (empty subarray).
+    So we just return maxSum.
+
+    */
     if (maxSum < 0) return maxSum;
 
     return max(maxSum, total - minSum);
